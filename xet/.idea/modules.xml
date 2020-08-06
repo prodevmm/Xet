@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Xdemo.iml" filepath="$PROJECT_DIR$/../Xdemo.iml" group="Xdemo" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" group="Xdemo/app" />
+      <module fileurl="file://$PROJECT_DIR$/xet.iml" filepath="$PROJECT_DIR$/xet.iml" group="Xdemo/xet" />
+    </modules>
+  </component>
+</project>
