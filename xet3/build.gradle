@@ -1,11 +1,12 @@
 plugins {
     id 'com.android.library'
+    id 'com.github.dcendents.android-maven'
     id 'kotlin-android'
     id 'maven-publish'
 }
 
 group = 'com.github.jitpack'
-version = '3.0.2'
+version = '3.0.3'
 
 android {
     compileSdk 31
@@ -14,7 +15,7 @@ android {
         minSdk 18
         targetSdk 31
         versionCode 3
-        versionName "3.0.2"
+        versionName "3.0.3"
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -46,7 +47,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.bllsht'
                 artifactId = 'xet'
-                version = '3.0.2'
+                version = '3.0.3'
             }
         }
     }
