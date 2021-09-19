@@ -29,7 +29,7 @@ internal object UrlWorker {
                 }
             }
 
-            if (selectedScript != null) {
+            return if (selectedScript != null) {
                 val lowUrlResult = REGEX_LOW_URL.find(selectedScript)
                 if (lowUrlResult != null && lowUrlResult.groupValues.isNotEmpty()) {
                     val sdUrl = lowUrlResult.groupValues[1]
@@ -41,9 +41,9 @@ internal object UrlWorker {
                     val hlsUrl =
                         if (hlsUrlResult != null && hlsUrlResult.groupValues.isNotEmpty()) hlsUrlResult.groupValues[1] else null
 
-                    return Result(Response(sdUrl, hdUrl, hlsUrl))
-                } else return throwsException(MSG_REGEX_LOW_NOT_MATCH)
-            } else return throwsException(MSG_SCRIPT_NOT_FOUND)
+                    Result(Response(sdUrl, hdUrl, hlsUrl))
+                } else throwsException(MSG_REGEX_LOW_NOT_MATCH)
+            } else throwsException(MSG_SCRIPT_NOT_FOUND)
 
         } catch (e: Exception) {
             return throwsException(e.message)
